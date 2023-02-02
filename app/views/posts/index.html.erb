@@ -1,0 +1,10 @@
+
+<% @posts.each do |f| %>
+    
+    <b>Title:</b><%= f.tittle %><br>
+    <b>Description:</b><%= f.description %><br>
+     <b>Title:</b><%= f.category_id %>
+    <b>Description:</b><%= f.user_id %><br>
+     <b>Description:</b><%= f.active %><br>
+       <%= link_to "show" ,post_path(f) %><br><br>
+    <% end %>

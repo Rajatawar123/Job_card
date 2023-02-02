@@ -1,0 +1,23 @@
+<%= form_with(model: @post) do |form| %>
+
+
+     <%= form.label :tittle, "tittle:" %><br>
+     <%= form.text_field :tittle %><br>
+
+     <%= form.label :description, "Description:" %><br>
+     <%= form.text_area :description %><br>
+
+     <%= form.label :user_id, "User_id:" %><br>
+     <%= form.text_area :user_id%><br>
+     
+     <%= form.label :category_id, "category_id:" %>
+     <%= form.select :category_id, Category.all.collect { |p| [p.name] }, include_blank: true %><br>
+
+     <%= form.label :active%>
+     <%= form.check_box :check_box, required:true%><br>
+
+     
+     <div class="actions"><br>
+       <%= form.submit %><br>
+     </div>
+   <% end %>
